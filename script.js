@@ -70,7 +70,7 @@ let studentDetailsArray = [
   studentContactNo,
 ];
 
-console.log(studentDetailsArray);
+// console.log(studentDetailsArray);
 
 let studentDetails = {
   studentName: "",
@@ -82,7 +82,7 @@ let studentDetails = {
 studentDetailsArray.forEach((eachField) => {
   eachField.addEventListener("input", (e) => {
     studentDetails[e.target.id] = e.target.value;
-    console.log(studentDetails);
+    // console.log(studentDetails);
   });
 });
 
