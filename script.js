@@ -7,10 +7,14 @@ const table = document.querySelector("#studentsTable")
 const submitBtn = document.getElementById("submit-btn");
 const registrationForm = document.getElementById("registration-form");
 
+
+
   let rowId = 1;
   
   let editRow = null
 
+
+  //for saving data in local storage
 function saveToLocalStorage() {
   const rows = [...registeredStudentTable.querySelectorAll("tr")];
   const data = rows.map(row => {
@@ -28,8 +32,11 @@ function saveToLocalStorage() {
   localStorage.setItem("studentsData", JSON.stringify(data));
 }
 
+
+//after refreshing first load data from local storage
 function loadFromLocalStorage() {
   const data = JSON.parse(localStorage.getItem("studentsData")) || [];
+
 
   data.forEach((item) => {
     const row = document.createElement("tr");
@@ -48,6 +55,8 @@ function loadFromLocalStorage() {
 
   updateTableScroll();
 }
+
+//calling local storage one time after loading DOM
 loadFromLocalStorage();
 
 function updateTableScroll() {
@@ -130,6 +139,7 @@ rowData.classList.add("hover:bg-gray-700", "transition-colors");
   registrationForm.reset();
   saveToLocalStorage();
 });
+
 
 registeredStudentTable.addEventListener('click' , (e)=>{
  if (e.target.classList.contains("btn-delete")) {
