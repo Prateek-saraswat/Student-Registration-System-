@@ -71,7 +71,7 @@ function updateTableScroll() {
 }
 
 
-
+//created array so that i can loop and apply event listener easily not one by one 
 let studentDetailsArray = [
   studentName,
   studentId,

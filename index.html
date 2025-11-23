@@ -19,22 +19,22 @@
       <form id="registration-form" class="space-y-4">
         <div>
           <label for="studentName" class="block font-medium mb-1"  >Student Name</label>
-          <input type="text" id="studentName" pattern="[A-Za-z]+" name="name" required 
+          <input type="text" id="studentName" pattern="[A-Za-z ]+" title="Only alphabets and spaces are allowed"  name="name" required 
                  class="border border-gray-600 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"/>
         </div>
         <div>
           <label for="studentId" class="block font-medium mb-1">Student Id</label>
-          <input type="number" id="studentId" name="student-id" required 
+          <input type="number" id="studentId" name="student-id" title="Student Id should be in Numbers Only"  required 
                  class="border border-gray-600 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"/>
         </div>
         <div>
           <label for="studentEmailId" class="block font-medium mb-1">Email Id</label>
-          <input type="email" id="studentEmailId" name="studentEmailId" required 
+          <input type="email" id="studentEmailId" title="Enter a valid email address format"  name="studentEmailId" required 
                  class="border border-gray-600 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"/>
         </div>
         <div>
           <label for="studentContactNo" class="block font-medium mb-1">Contact No.</label>
-          <input type="text" id="studentContactNo" name="studentContactNo" minlength="10" maxlength="10" pattern="[0-9]{10}" required
+          <input type="text" id="studentContactNo" name="studentContactNo" title="Atleast 10 digits should be there"  minlength="10" maxlength="11" pattern="[0-9]{10}" required
                  class="border border-gray-600 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-900 text-white"/>
         </div>
         <button type="submit" id="submit-btn" 
