@@ -1,0 +1,10 @@
+#studentsTable tbody {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+}
+#studentsTable thead, #studentsTable tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
